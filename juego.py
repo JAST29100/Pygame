@@ -1,7 +1,6 @@
-import random as al
+import random
 import time
 import os
-import sys
 
 # La funcion nl imprime una linea vacia en la consola
 def nl():
@@ -17,7 +16,7 @@ def Decision(opciones):
         if entrada in posibles:
             return entrada
         else:
-            sys.stdout.write("\033[F\033[K")
+            print("\033[F\033[K", end="")
 # La funcion InicializarEstadisticas inicializa las estadisticas del jugador
 def InicializarEstadisticas():
     oro = 100
@@ -113,6 +112,7 @@ def MensajeInicio():
     print("Confundido, te levantas y buscas a la persona mas cercana para preguntar donde estás.")
     input()
     cls()
+
 
 # ============================== Funcion principal ==============================
 def main():
